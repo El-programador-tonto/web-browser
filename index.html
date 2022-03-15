@@ -10,7 +10,7 @@
       <div class="main">
         <img src="file:///home/chronos/u-c9529abe736f60b522ea0522211e7efcb2c38c19/MyFiles/Downloads/images.jpeg">
         <div class="searchBx">
-          <input type="text" name="" class="query">
+          <input type="text" name="" class="query" value="">
           <div class="icons">
             <div><img src="file:///home/chronos/u-c9529abe736f60b522ea0522211e7efcb2c38c19/MyFiles/Downloads/d.png"></div>
              <div><img src="file:///home/chronos/u-c9529abe736f60b522ea0522211e7efcb2c38c19/MyFiles/Downloads/gold-microphone-YeXYJR7-600.jpg"></div>
@@ -22,6 +22,12 @@
     </section>
       <script>
         let query = document.querySelector('.query');
+        let searchBtn = document.querySelector('.searchBtn');
+        
+        searchBtn.onClick = function(){
+          let url = 'https://www.google.com/search?q='+query.value;
+          window.open(url,'_self');
+        }
       </script>
   </body>
     </html>
